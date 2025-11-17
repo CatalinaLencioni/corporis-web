@@ -45,61 +45,62 @@ const Contacto = () => {
     })
   }
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    alert('Gracias por tu mensaje. Te contactaremos pronto.')
-    setFormData({
-      nombre: '',
-      email: '',
-      telefono: '',
-      motivo: location.state?.servicio || '',
-      mensaje: contextMessage
-    })
-  }
+const handleSubmit = (e) => {
+  e.preventDefault()
+
+  const whatsappURL = `https://wa.me/5493517466826?text=${encodeURIComponent(
+    `📩 *Nueva consulta desde la web Corporis Salud*
+
+👤 *Nombre:* ${formData.nombre}
+📧 *Email:* ${formData.email}
+📱 *Teléfono:* ${formData.telefono || 'No indicado'}
+📌 *Motivo:* ${formData.motivo || 'No indicado'}
+
+📝 *Mensaje:*
+${formData.mensaje}`
+  )}`
+
+  window.open(whatsappURL, "_blank")
+
+  setFormData({
+    nombre: '',
+    email: '',
+    telefono: '',
+    motivo: location.state?.servicio || '',
+    mensaje: contextMessage
+  })
+}
+
 
   const contactChannels = [
     {
       icon: '📞',
       title: 'Teléfonos directos',
-      lines: ['Emergencias: (011) 1234-5678', 'Administración: (011) 8765-4321'],
+      lines: ['Coordinador: 351-7466826', 'Administración: 351-6410124'],
     },
     {
       icon: '✉️',
       title: 'Correos',
-      lines: ['info@corporissalud.com', 'turnos@corporissalud.com'],
+      lines: ['corporiscentral@gmail.com', 'ivanfarias.corporissalud@gmail.com'],
     },
     {
       icon: '📍',
-      title: 'Clínica central',
-      lines: ['Av. Siempre Viva 123', 'Buenos Aires, Argentina'],
+      title: 'Oficina de Administración',
+      lines: ['Jose Roque Funes 1761, PB-B ', 'Cerro de las Rosas, Córdoba'],
     },
   ]
 
-  const contactHighlights = [
-    { value: '24hs', label: 'Respuesta a emergencias' },
-    { value: '2', label: 'Sucursales activas' },
-    { value: '15', label: 'Coordinadores administrativos' },
-    { value: '300+', label: 'Familias asistidas este año' },
-  ]
+  const contactHighlights = []
 
   return (
     <div className="contact-page-hero">
       <section className="contact-hero-section">
         <div className="container">
-          <span className="contact-pill">Contacto</span>
           <h1>Estamos disponibles para coordinar tu atención</h1>
           <p>
             Nuestro equipo responde consultas sobre turnos, coberturas, coordinación domiciliaria y servicios
             corporativos. Contanos qué necesitás y te guiaremos en minutos.
           </p>
-          <div className="contact-highlights">
-            {contactHighlights.map((item) => (
-              <div key={item.label} className="contact-highlight-card">
-                <span>{item.value}</span>
-                <p>{item.label}</p>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 
@@ -126,7 +127,6 @@ const Contacto = () => {
               <h3>Horarios de atención</h3>
               <p>Lunes a Viernes · 08:00 a 20:00</p>
               <p>Sábados · 09:00 a 13:00</p>
-              <span>Guardia de enfermería 24/7</span>
             </div>
           </div>
 

@@ -40,6 +40,12 @@ const Navbar = () => {
             Obras Sociales
           </Link>
           <Link 
+            to="/trabaja-con-nosotros" 
+            className={`nav-link ${location.pathname === '/trabaja-con-nosotros' ? 'active' : ''}`}
+          >
+            Trabajá con nosotros
+          </Link>
+          <Link 
             to="/contacto" 
             className={`nav-link ${location.pathname === '/contacto' ? 'active' : ''}`}
           >

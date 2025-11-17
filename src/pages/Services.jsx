@@ -8,7 +8,6 @@ const Services = () => {
       title: "Asistencia de enfermería 24hs",
       description:
         "Equipo especializado que cubre guardias, visitas domiciliarias y seguimiento permanente.",
-      icon: "🩺",
       badge: "Guardia activa",
       tags: ["24/7", "Domiciliaria", "Cobertura total"],
     },
@@ -16,7 +15,6 @@ const Services = () => {
       title: "Cuidados domiciliarios",
       description:
         "Planes personalizados para rehabilitación, control de signos vitales y acompañamiento terapéutico.",
-      icon: "🏡",
       badge: "Plan a medida",
       tags: ["Plan mensual", "Supervisión médica"],
     },
@@ -24,7 +22,6 @@ const Services = () => {
       title: "Ortopedia y traumatología",
       description:
         "Adaptamos elementos ortopédicos, realizamos controles postquirúrgicos y acompañamos la recuperación.",
-      icon: "🦴",
       badge: "Especialistas",
       tags: ["Prótesis", "Reeducación"],
     },
@@ -32,7 +29,6 @@ const Services = () => {
       title: "Rehabilitación integral",
       description:
         "Kinesiología, terapia ocupacional y fonoaudiología con circuitos de ejercicios y seguimiento digital.",
-      icon: "💪",
       badge: "Centros aliados",
       tags: ["Sesiones guiadas", "Plan progresivo"],
     },
@@ -40,7 +36,6 @@ const Services = () => {
       title: "Cuidados paliativos",
       description:
         "Acompañamos al paciente y su familia con soporte médico, psicológico y espiritual.",
-      icon: "🌿",
       badge: "Humanizado",
       tags: ["Interdisciplinario", "Apoyo familiar"],
     },
@@ -48,7 +43,6 @@ const Services = () => {
       title: "Coordinación médica",
       description:
         "Gestionamos turnos, derivaciones y recetas electrónicas articulando con obras sociales.",
-      icon: "📋",
       badge: "Gestión express",
       tags: ["Turnos", "Derivaciones"],
     },
@@ -72,11 +66,27 @@ const Services = () => {
     },
   ]
 
-  const stats = [
-    { value: "15+", label: "Años acompañando familias" },
-    { value: "120", label: "Profesionales activos" },
-    { value: "24hs", label: "Tiempo promedio de respuesta" },
-    { value: "50+", label: "Obras sociales integradas" },
+  const process = [
+    {
+      step: "01",
+      title: "Evaluación inicial",
+      description: "Analizamos tu situación médica, necesidades y cobertura para diseñar el plan ideal.",
+    },
+    {
+      step: "02",
+      title: "Plan personalizado",
+      description: "Definimos equipo, frecuencia de visitas y recursos necesarios para tu recuperación.",
+    },
+    {
+      step: "03",
+      title: "Atención integral",
+      description: "Comienza el acompañamiento con profesionales dedicados y disponibilidad 24/7.",
+    },
+    {
+      step: "04",
+      title: "Seguimiento continuo",
+      description: "Reportes periódicos, ajustes de plan y coordinación constante con tu médico.",
+    },
   ]
 
   const handleScheduleMeeting = () => {
@@ -102,7 +112,6 @@ const Services = () => {
     <div className="services-page">
       <section className="services-hero">
         <div className="container">
-          <span className="services-pill">Corporis Salud</span>
           <h1>Servicios diseñados para cada etapa del cuidado</h1>
           <p>
             Combinamos especialistas, tecnología y un acompañamiento cercano para ofrecer soluciones médicas
@@ -123,23 +132,18 @@ const Services = () => {
         <div className="container">
           <header className="services-grid-header">
             <div>
-              <p className="eyebrow">Nuestro catálogo</p>
               <h2>Elegimos la combinación ideal para cada paciente</h2>
               <p>
                 Cada programa incluye seguimiento clínico, reportes periódicos y un coordinador dedicado que
                 gestiona todos los pasos por vos.
               </p>
             </div>
-            <button className="services-cta" onClick={handleScheduleMeeting}>
-              Agendar una asesoría
-            </button>
           </header>
 
           <div className="services-grid">
             {services.map((service) => (
               <article key={service.title} className="service-card">
                 <div className="service-card-header">
-                  <span className="service-icon">{service.icon}</span>
                   <span className="service-badge">{service.badge}</span>
                 </div>
                 <h3>{service.title}</h3>
@@ -164,24 +168,24 @@ const Services = () => {
         </div>
       </section>
 
-      <section className="services-stats">
+      <section className="services-process">
         <div className="container">
-          <div className="services-stats-grid">
-            {stats.map((stat) => (
-              <div key={stat.label} className="services-stat">
-                <span className="stat-value">{stat.value}</span>
-                <span className="stat-label">{stat.label}</span>
+          <div className="process-header">
+            <p className="eyebrow">Proceso Simple</p>
+            <h2>Cómo comenzamos a cuidarte</h2>
+          </div>
+          <div className="process-grid">
+            {process.map((item) => (
+              <div key={item.step} className="process-card">
+                <div className="process-step">{item.step}</div>
+                <h3>{item.title}</h3>
+                <p>{item.description}</p>
               </div>
             ))}
           </div>
-          <div className="services-note">
-            <p>
-              “El equipo de Corporis nos permitió continuar con la rehabilitación en casa. Están siempre
-              disponibles y coordinan todos los turnos.” — Familia Rivero
-            </p>
-          </div>
         </div>
       </section>
+
     </div>
   )
 }

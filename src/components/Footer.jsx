@@ -29,6 +29,7 @@ const Footer = () => {
                 <div>
                   <p>+54 9 3516410124</p>
                   <p>+54 9 3517466826</p>
+                  <p>+54 9 3515732409 </p>
                 </div>
               </div>
               <div className="contact-item">
@@ -38,6 +39,8 @@ const Footer = () => {
               <div className="contact-item">
                 <span className="contact-icon">📍</span>
                 <p>José Roque Funes 1761, PB-B<br />Cerro de las Rosas, Córdoba</p>
+                <span className="contact-icon">📍</span>
+                <p>Piedras 383, piso 6<br />Cdad. Autónoma de Buenos Aires</p>
               </div>
             </div>
           </div>

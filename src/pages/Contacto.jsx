@@ -6,12 +6,12 @@ const SEDES = {
   cordoba: {
     slug: "cordoba",
     nombre: "Córdoba",
-    whatsapp: "5493517466826",
+    whatsapp: "3516137269",
     contactChannels: [
       {
         icon: "📞",
         title: "Teléfonos directos",
-        lines: ["Coordinador: 351-7466826", "Administración: 351-6410124"],
+        lines: ["Coordinador: 3516137269", "Administración: 351-6410124"],
       },
       {
         icon: "✉️",

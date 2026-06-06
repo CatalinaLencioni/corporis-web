@@ -51,8 +51,8 @@ const Home = () => {
 
   const benefits = [
     { number: '16+', label: 'Años de trayectoria' },
-    { number: '300+', label: 'Pacientes asistidos mensualmente' },
-    { number: '120+', label: 'Profesionales capacitados' },
+    { number: '500+', label: 'Pacientes asistidos mensualmente' },
+    { number: '250+', label: 'Profesionales capacitados' },
     { number: '24/7', label: 'Disponibilidad y acompañamiento' },
   ]
 

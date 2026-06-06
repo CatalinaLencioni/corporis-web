@@ -5,98 +5,80 @@ const Services = () => {
 
   const services = [
     {
-      title: "Asistencia de enfermería 24hs",
-      description:
-        "Equipo especializado que cubre guardias, visitas domiciliarias y seguimiento permanente.",
+      title: "Enfermería 24 hs",
+      description: "Guardias, visitas domiciliarias, control de signos vitales y seguimiento profesional.",
       badge: "Guardia activa",
-      tags: ["24/7", "Domiciliaria", "Cobertura total"],
+      tags: ["24/7", "Domicilio", "Seguimiento"],
     },
     {
       title: "Cuidados domiciliarios",
-      description:
-        "Planes personalizados para rehabilitación, control de signos vitales y acompañamiento terapéutico.",
+      description: "Acompañamiento diario, higiene, confort, medicación y asistencia en rutinas del paciente.",
       badge: "Plan a medida",
-      tags: ["Plan mensual", "Supervisión médica"],
-    },
-    {
-      title: "Ortopedia y traumatología",
-      description:
-        "Adaptamos elementos ortopédicos, realizamos controles postquirúrgicos y acompañamos la recuperación.",
-      badge: "Especialistas",
-      tags: ["Prótesis", "Reeducación"],
+      tags: ["Familia", "Rutina", "Supervisión"],
     },
     {
       title: "Rehabilitación integral",
-      description:
-        "Kinesiología, terapia ocupacional y fonoaudiología con circuitos de ejercicios y seguimiento digital.",
-      badge: "Centros aliados",
-      tags: ["Sesiones guiadas", "Plan progresivo"],
+      description: "Kinesiología, terapia ocupacional y fonoaudiología con objetivos claros de recuperación.",
+      badge: "Evolución guiada",
+      tags: ["Kinesiología", "Terapia", "Progreso"],
     },
     {
       title: "Cuidados paliativos",
-      description:
-        "Acompañamos al paciente y su familia con soporte médico, psicológico y espiritual.",
+      description: "Soporte médico, psicológico y familiar con una mirada humana y respetuosa.",
       badge: "Humanizado",
-      tags: ["Interdisciplinario", "Apoyo familiar"],
+      tags: ["Contención", "Dolor", "Familia"],
+    },
+    {
+      title: "Ortopedia y traumatología",
+      description: "Acompañamiento postquirúrgico, adaptación de elementos y recuperación funcional.",
+      badge: "Especialistas",
+      tags: ["Postquirúrgico", "Movilidad"],
     },
     {
       title: "Coordinación médica",
-      description:
-        "Gestionamos turnos, derivaciones y recetas electrónicas articulando con obras sociales.",
-      badge: "Gestión express",
-      tags: ["Turnos", "Derivaciones"],
+      description: "Gestión de derivaciones, recetas, indicaciones y comunicación con obras sociales.",
+      badge: "Gestión simple",
+      tags: ["Turnos", "Cobertura", "Informes"],
     },
   ]
 
   const highlights = [
     {
-      title: "Equipo interdisciplinario",
-      description:
-        "Enfermería, médicos clínicos, kinesiólogos y psicólogos trabajando bajo el mismo plan terapéutico.",
+      title: "Un plan por paciente",
+      description: "Nada es genérico: cada frecuencia, profesional y recurso se define según la necesidad real.",
     },
     {
-      title: "Cobertura nacional",
-      description:
-        "Operamos en todo Córdoba y coordinamos prestadores aliados en las principales ciudades del país.",
+      title: "Comunicación clara",
+      description: "La familia sabe qué se hace, cuándo se hace y quién coordina cada etapa.",
     },
     {
-      title: "Monitoreo digital",
-      description:
-        "Reportes semanales, indicadores y alertas tempranas para que la familia esté informada en tiempo real.",
+      title: "Red profesional",
+      description: "Trabajamos con equipos interdisciplinarios y prestadores preparados para atención domiciliaria.",
     },
   ]
 
   const process = [
     {
       step: "01",
-      title: "Evaluación inicial",
-      description: "Analizamos tu situación médica, necesidades y cobertura para diseñar el plan ideal.",
+      title: "Consulta inicial",
+      description: "Nos contás la situación médica, cobertura y urgencia de la atención.",
     },
     {
       step: "02",
-      title: "Plan personalizado",
-      description: "Definimos equipo, frecuencia de visitas y recursos necesarios para tu recuperación.",
+      title: "Evaluación",
+      description: "Analizamos el caso y definimos qué tipo de equipo necesita el paciente.",
     },
     {
       step: "03",
-      title: "Atención integral",
-      description: "Comienza el acompañamiento con profesionales dedicados y disponibilidad 24/7.",
+      title: "Plan de cuidado",
+      description: "Armamos frecuencia, profesionales, objetivos y coordinación administrativa.",
     },
     {
       step: "04",
-      title: "Seguimiento continuo",
-      description: "Reportes periódicos, ajustes de plan y coordinación constante con tu médico.",
+      title: "Seguimiento",
+      description: "Acompañamos la evolución y ajustamos el plan cuando hace falta.",
     },
   ]
-
-  const handleScheduleMeeting = () => {
-    navigate('/contacto', {
-      state: {
-        motivo: 'asesoria',
-        mensaje: 'Quisiera agendar una asesoría para evaluar el mejor plan de cuidados.',
-      },
-    })
-  }
 
   const handleRequestInfo = (serviceTitle) => {
     navigate('/contacto', {
@@ -110,12 +92,13 @@ const Services = () => {
 
   return (
     <div className="services-page">
-      <section className="services-hero">
+      <section className="services-hero page-hero">
         <div className="container">
-          <h1>Servicios diseñados para cada etapa del cuidado</h1>
+          <span className="services-pill page-pill">Servicios</span>
+          <h1>Soluciones de salud pensadas para cada etapa del cuidado</h1>
           <p>
-            Combinamos especialistas, tecnología y un acompañamiento cercano para ofrecer soluciones médicas
-            que se adaptan a la realidad de cada familia.
+            Coordinamos profesionales, cobertura y seguimiento para que la atención domiciliaria sea clara,
+            ordenada y humana desde el primer contacto.
           </p>
           <div className="services-hero-points">
             {highlights.map((item) => (
@@ -132,10 +115,10 @@ const Services = () => {
         <div className="container">
           <header className="services-grid-header">
             <div>
+              <p className="eyebrow">Programas de atención</p>
               <h2>Elegimos la combinación ideal para cada paciente</h2>
               <p>
-                Cada programa incluye seguimiento clínico, reportes periódicos y un coordinador dedicado que
-                gestiona todos los pasos por vos.
+                Cada servicio puede integrarse dentro de un plan mensual o solicitarse como prestación puntual.
               </p>
             </div>
           </header>
@@ -150,17 +133,11 @@ const Services = () => {
                 <p>{service.description}</p>
                 <div className="service-tags">
                   {service.tags.map((tag) => (
-                    <span key={tag} className="service-tag">
-                      {tag}
-                    </span>
+                    <span key={tag} className="service-tag">{tag}</span>
                   ))}
                 </div>
-                <button
-                  className="service-card-cta"
-                  type="button"
-                  onClick={() => handleRequestInfo(service.title)}
-                >
-                  Solicitar información
+                <button className="service-card-cta" type="button" onClick={() => handleRequestInfo(service.title)}>
+                  Consultar servicio
                 </button>
               </article>
             ))}
@@ -170,14 +147,14 @@ const Services = () => {
 
       <section className="services-process">
         <div className="container">
-          <div className="process-header">
-            <p className="eyebrow">Proceso Simple</p>
+          <div className="section-heading">
+            <p className="section-eyebrow">Proceso simple</p>
             <h2>Cómo comenzamos a cuidarte</h2>
           </div>
           <div className="process-grid">
             {process.map((item) => (
               <div key={item.step} className="process-card">
-                <div className="process-step">{item.step}</div>
+                <span className="process-step">{item.step}</span>
                 <h3>{item.title}</h3>
                 <p>{item.description}</p>
               </div>
@@ -185,7 +162,6 @@ const Services = () => {
           </div>
         </div>
       </section>
-
     </div>
   )
 }

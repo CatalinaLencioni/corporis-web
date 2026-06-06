@@ -2,6 +2,7 @@ import { useNavigate } from 'react-router-dom'
 
 const ObrasSociales = () => {
   const navigate = useNavigate()
+
   const obrasSociales = [
     { logo: '/apross.png', nombre: 'APROSS', tipo: 'Provincial' },
     { logo: '/PAMI.png', nombre: 'PAMI', tipo: 'Nacional' },
@@ -14,14 +15,18 @@ const ObrasSociales = () => {
   ]
 
   const benefits = [
-    { title: 'Coordinación completa', description: 'Autorizaciones, derivaciones y auditorías gestionadas por nuestro equipo administrativo.' },
-    { title: 'Planes flexibles', description: 'Combinamos servicios de cuidados domiciliarios, rehabilitación y ortopedia según cada cobertura.' },
-    { title: 'Respuesta en 24 hs', description: 'Confirmamos disponibilidad y turnos en menos de un día hábil para casos prioritarios.' },
-  ]
-
-  const coverageNote = [
-    'Si tu obra social no figura en el listado, escribinos igualmente: solemos gestionar convenios especiales.',
-    'Disponemos de planes particulares con descuentos para pacientes sin cobertura.',
+    {
+      title: 'Gestión completa',
+      description: 'Te orientamos con autorizaciones, derivaciones y documentación necesaria.',
+    },
+    {
+      title: 'Planes flexibles',
+      description: 'Combinamos cuidados, rehabilitación y seguimiento según cada cobertura.',
+    },
+    {
+      title: 'Respuesta ágil',
+      description: 'Confirmamos condiciones y disponibilidad para avanzar sin vueltas.',
+    },
   ]
 
   const goToContact = () => {
@@ -35,17 +40,15 @@ const ObrasSociales = () => {
 
   return (
     <div className="obras-page">
-      <section className="obras-hero">
+      <section className="obras-hero page-hero">
         <div className="container">
-          <span className="obras-pill">Coberturas</span>
-          <h1>Trabajamos con las obras sociales y prepagas más confiables</h1>
+          <span className="obras-pill page-pill">Coberturas</span>
+          <h1>Trabajamos con obras sociales, prepagas y planes particulares</h1>
           <p>
-            Gestionamos autorizaciones, auditorías y reintegros para que la experiencia médica sea ágil. Nuestro
-            equipo administrativo está en contacto directo con cada entidad.
+            Nuestro equipo administrativo te ayuda a ordenar requisitos, autorizaciones y próximos pasos para que
+            puedas enfocarte en la atención.
           </p>
-          <button className="obras-cta" onClick={goToContact}>
-            Consultar mi cobertura
-          </button>
+          <button className="obras-cta" onClick={goToContact}>Consultar mi cobertura</button>
         </div>
       </section>
 
@@ -54,10 +57,10 @@ const ObrasSociales = () => {
           <header className="obras-grid-header">
             <div>
               <p className="eyebrow">Red de convenios</p>
-              <h2>Más de 40 convenios activos en todo el país</h2>
-              <p>Estas son algunas de las entidades con las que trabajamos a diario.</p>
+              <h2>Algunas entidades con las que trabajamos</h2>
+              <p>Si tu cobertura no aparece, escribinos igual: podemos revisar alternativas.</p>
             </div>
-            <span className="obras-legend">Actualizamos el listado mensualmente</span>
+            <span className="obras-legend">Consulta sujeta a validación</span>
           </header>
 
           <div className="obras-grid">
@@ -89,11 +92,10 @@ const ObrasSociales = () => {
               </article>
             ))}
           </div>
-          <ul className="obras-note">
-            {coverageNote.map((item) => (
-              <li key={item}>{item}</li>
-            ))}
-          </ul>
+          <div className="obras-note">
+            <p>También contamos con opciones particulares para pacientes sin cobertura o con reintegro.</p>
+            <p>El equipo puede orientarte sobre documentación médica y pasos administrativos.</p>
+          </div>
         </div>
       </section>
     </div>

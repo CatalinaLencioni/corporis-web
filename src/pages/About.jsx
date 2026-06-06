@@ -2,105 +2,75 @@ const About = () => {
   const timeline = [
     {
       year: "2009",
-      title: "Nacimiento de Corporis Salud",
-      description:
-        "Iniciamos actividades en Córdoba brindando internación domiciliaria con un enfoque humano y cercano.",
-    },
-    {
-      year: "2010 - 2015",
-      title: "Consolidación del servicio",
-      description:
-        "Se incorporan médicos clínicos, enfermería profesional, kinesiólogos, psicólogos y cuidadores.",
-    },
-    {
-      year: "2016 - 2018",
-      title: "Crecimiento sostenido",
-      description:
-        "Superamos los 200 pacientes mensuales ampliando la red de profesionales certificados.",
-    },
-    {
-      year: "2019",
-      title: "Más de 300 pacientes",
-      description:
-        "Atención mensual a más de 300 pacientes con seguimiento clínico y acompañamiento continuo.",
-    },
-    {
-      year: "2020 - 2022",
-      title: "Planes personalizados",
-      description:
-        "Se integran convenios y presupuestos adaptados a obras sociales y prepagas según cada necesidad.",
-    },
-    {
-      year: "2023 - Actualidad",
-      title: "Fortalecimiento institucional",
-      description:
-        "Refuerzo de valores: responsabilidad, integridad, respeto y compromiso. Atención 24/7 en Córdoba.",
-    },
-  ];
-
-  const milestones = [
-    {
-      year: "2009",
-      title: "Fundación en Córdoba",
-      detail:
-        "Abrimos el primer centro con un equipo de 12 profesionales enfocados en cuidados domiciliarios.",
+      title: "Inicio en Córdoba",
+      description: "Nacimos con un equipo cercano y especializado en internación domiciliaria.",
     },
     {
       year: "2015",
-      title: "Programa integral",
-      detail:
-        "Sumamos rehabilitación, ortopedia y monitoreo remoto para pacientes crónicos.",
+      title: "Equipo interdisciplinario",
+      description: "Sumamos enfermería, kinesiología, psicología, cuidadores y coordinación médica.",
     },
     {
-      year: "2021",
-      title: "Expansión nacional",
-      detail:
-        "Red de aliados en las principales ciudades y coordinación con más de 40 obras sociales.",
+      year: "2019",
+      title: "Más familias acompañadas",
+      description: "Consolidamos una red de profesionales para responder con continuidad y criterio clínico.",
     },
-  ];
+    {
+      year: "Hoy",
+      title: "Atención integral",
+      description: "Trabajamos con planes personalizados, obras sociales y seguimiento permanente.",
+    },
+  ]
 
   const values = [
-    {title: "Cuidado humano", description: "Escuchamos a cada familia para diseñar un plan que respete su historia y ritmo.",},
-    {title: "Coordinación profesional", description:"Integramos especialistas y obras sociales para garantizar un cuidado eficiente y seguro.",},
-    {title: "Colaboración en equipo", description: "Fomentamos la colaboración entre profesionales y familias para ofrecer soluciones integrales y acompañamiento continuo.",},
-  ];
+    {
+      title: "Cuidado humano",
+      description: "Escuchamos a cada familia para diseñar un plan respetuoso, claro y posible.",
+    },
+    {
+      title: "Coordinación profesional",
+      description: "Integramos especialistas, prestadores y coberturas para simplificar el proceso.",
+    },
+    {
+      title: "Acompañamiento real",
+      description: "Estamos presentes antes, durante y después de cada etapa del tratamiento.",
+    },
+  ]
 
   const stats = [
-    { value: "15+", label: "Años acompañando" },
-    { value: "120", label: "Profesionales activos" },
-    { value: "6", label: "Unidades móviles" },
-    { value: "4.9/5", label: "Satisfacción promedio" },
-  ];
+    { value: "16+", label: "Años de trayectoria" },
+    { value: "120+", label: "Profesionales activos" },
+    { value: "300+", label: "Pacientes mensuales" },
+    { value: "24/7", label: "Acompañamiento" },
+  ]
 
   return (
     <div className="about-page">
-      <section className="about-hero">
+      <section className="about-hero page-hero">
         <div className="container">
-          <span className="about-pill">Conocenos</span>
-          <h1>Combinamos calidez clínica y gestión inteligente</h1>
+          <span className="about-pill page-pill">Conocenos</span>
+          <h1>Cuidado domiciliario con calidez clínica y gestión clara</h1>
           <p>
-            En Corporis Salud creemos que un buen diagnóstico se construye tanto
-            con conocimiento médico como con la cercanía necesaria para
-            acompañar cada decisión.
+            En Corporis Salud combinamos experiencia médica, coordinación administrativa y cercanía humana para
+            acompañar a pacientes y familias en el hogar.
           </p>
         </div>
       </section>
 
       <section className="about-story">
         <div className="container">
-          <div className="about-story-content">
+          <div className="about-story-content elevated-panel">
             <div>
-              <h2>Nuestra misión</h2>
+              <p className="eyebrow">Nuestra esencia</p>
+              <h2>Salud en casa, con una red que responde</h2>
               <p>
-                Brindar soluciones integrales de salud en el hogar y en nuestros
-                centros asociados, priorizando la dignidad del paciente, la
-                coordinación eficiente y la transparencia con las familias.
+                Brindamos soluciones integrales de salud domiciliaria priorizando la dignidad del paciente, la
+                comunicación con la familia y la coordinación eficiente de cada profesional involucrado.
               </p>
               <h3>Visión</h3>
               <p>
-                Ser la red de cuidado interdisciplinario más confiable de la
-                región, donde la tecnología esté al servicio del vínculo humano
-                y no al revés.
+                Ser una red de cuidado interdisciplinario confiable, donde cada decisión clínica esté acompañada por
+                una gestión simple, humana y transparente.
               </p>
             </div>
             <div className="about-highlights">
@@ -117,8 +87,8 @@ const About = () => {
 
       <section className="about-values">
         <div className="container">
-          <div className="about-values-header">
-            <p className="eyebrow">Nuestros pilares</p>
+          <div className="section-heading">
+            <p className="section-eyebrow">Nuestros pilares</p>
             <h2>Lo que guía cada intervención</h2>
           </div>
           <div className="about-values-grid">
@@ -134,10 +104,14 @@ const About = () => {
 
       <section className="services-timeline">
         <div className="container">
-          <h2>Evolucionamos junto a nuestros pacientes</h2>
-          <div className="timeline-grid">
+          <div className="section-heading">
+            <p className="section-eyebrow">Trayectoria</p>
+            <h2>Evolucionamos junto a nuestros pacientes</h2>
+          </div>
+          <div className="timeline-grid refined-timeline">
             {timeline.map((item) => (
               <div key={item.year} className="timeline-card">
+                <span className="timeline-year">{item.year}</span>
                 <div className="timeline-content">
                   <h3>{item.title}</h3>
                   <p>{item.description}</p>
@@ -148,7 +122,7 @@ const About = () => {
         </div>
       </section>
     </div>
-  );
-};
+  )
+}
 
-export default About;
+export default About
